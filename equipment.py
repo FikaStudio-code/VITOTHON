@@ -66,3 +66,20 @@ class Equipment:
     def start(self, program):
         name = self.name
         jexec(name, "/usr/local/etc/rc.d/{0} start".format(program))
+
+
+class Bridge(Equipment):
+    def __init__(self, jailname):
+        super().__init__(jailname)
+        arg = "ifconfig bridge create".split()
+        bridgename = subprocess.check_output(arg).decode()
+        ifconfig("{0} vnet {1}".format(bridgename, jailname))
+        jexec(jailname, "ifconfig {0} name vbridge0".format(bridgename))
+        jexec(jailname, "ifconfig vbridge0 up")
+
+    def connect(self, epair):
+        ifconfig("{0} vnet {1}".format(epair, self.name))
+        jexec(self.name, "ifconfig vbridge0 addm {0}".format(epair))
+
+    def assignip(self, ip, mask):
+        jexec(self.name, "ifconfig vbridge0 inet {0} netmask {1}".format(ip, mask))
