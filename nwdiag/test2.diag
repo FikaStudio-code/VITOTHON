@@ -1,0 +1,8 @@
+nwdiag {
+  network bridge01 {
+      address = "192.168.100.0/24"
+
+      Host [address = "192.168.100.254"];
+      server01 [address = "192.168.100.1"];
+  }
+}
