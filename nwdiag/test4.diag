@@ -1,0 +1,32 @@
+nwdiag {
+    inet [shape = cloud];
+    inet -- Host [address = "192.168.56.103"];
+    network bridge00 {
+        Host [address = "192.168.100.254"];
+        address = "192.168.100.0/24"
+        router01 [address = "192.168.100.1"];
+        router02 [address = "192.168.100.2"];
+    }
+    network brider01 {
+        address = "10.0.1.0/24";
+        router01 [address = "10.0.1.254"];
+        server01 [address = "10.0.1.1"];
+    }
+    network brider02 {
+        address = "10.0.2.0/24";
+        router02 [address = "10.0.2.254"];
+        server02 [address = "10.0.2.1"];
+    }
+
+    group AS65001 {
+        color = "#FFaaaa";
+        router01;
+        server01;        
+    }
+
+    group AS65002 {
+        color = "#aaaaFF";
+        router02;
+        server02;
+    }
+}

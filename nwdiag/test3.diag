@@ -1,9 +1,10 @@
 nwdiag {
     inet [shape = cloud];
-    inet -- Host;
+    inet -- Host_Kibana;
     network bridge01 {
-        Host [address = "192.168.100.254"];
+        Host_Kibana [address = "192.168.100.254"];
         address = "192.168.100.0/24"
         server01 [address = "192.168.100.1"];
+        LE [address = "192.168.100.2"];
   }
 }
