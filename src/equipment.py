@@ -1,7 +1,7 @@
 import re
 import subprocess
 
-from shcommand import *
+from src.shcommand import *
 
 class Equipment:
     def __init__(self, jailname):

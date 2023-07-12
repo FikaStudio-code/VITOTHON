@@ -1,8 +1,8 @@
 import json
 import subprocess
 import re
-from shcommand import *
-from equipment import *
+from src.shcommand import *
+from src.equipment import *
 
 class Operator:
     def __init__(self):

@@ -1,4 +1,8 @@
-from vitothon import Operator
+import os
+import sys
+sys.path.append(os.pardir)
+
+from src.vitothon import Operator
 import subprocess
 
 global jails

@@ -1,5 +1,5 @@
 import subprocess
-from equipment import Equipment
+from src.equipment import Equipment
 
 global jails
 jails = '/jails'
