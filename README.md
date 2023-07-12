@@ -23,22 +23,14 @@ VITOTHON のアプライアンスは http://www.fikastudio.net/VITOTHON.ova に�
 ### ネットワーク図を描く
 `nwdiag`[^2] を使用して `jail` ネットワーク図を作成しています。詳しくは、`nwdiag` のドキュメントを参考にしてください。また、VITOTHON の動作に `nwdiag` は必要ではありません。`jail` ネットワークを作成する上で、図があった方が便利だったので追加しているだけです。
 
-### 
-
 ## リポジトリ構成
 ```
 .
 ├── README.md
-├── equipment.py  # VITOTHON で使用
-├── mkrouter.sh   # ルータ用 jail 作成スクリプト
-├── mkserver.sh   # サーバ用 jail 作成スクリプト
-├── nwdiag        # ネットワーク図描画用フォルダ
-├── shcommand.py  # VITOTHON で使用
-├── test.py
-├── test2.py
-├── test3.py
-├── unjail.py     # jail 削除スクリプト
-└── vitothon.py   # VITOTHON で使用
+├── nwdiag     # ネットワーク図描画用フォルダ
+├── shell      # jail 作成スクリプト
+├── src        # VITOTHON 本体
+└── test
 ```
 
 ## Reference
