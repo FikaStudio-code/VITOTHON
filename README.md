@@ -14,6 +14,12 @@ GuestOS: FreeBSD 13.1-RELEASE
 VITOTHON を使用する方法は 2 つあります。  
 1. アプライアンスを使用する  
 VITOTHON のアプライアンスは http://www.fikastudio.net/VITOTHON.ova にて公開しています。リンクからダウンロードして、VirtualBox などでインポートしてください。zenn[^1] に VITOTHON を構築する様子を記事にしているので、内部構成などはそちらを参照してください。
+```
+アプライアンス情報
+user: shuma
+pass: shuma
+root_pass: shuma
+```
 2. ソースコードを使用する FreeBSD 環境に配置する  
 このリポジトリを使用している FreeBSD 環境に配置して使用してください。使用する上で必要な準備は zenn[^1] の記事を参考にしてください。
 
