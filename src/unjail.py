@@ -1,4 +1,8 @@
 import subprocess
+import os
+import sys
+sys.path.append(os.pardir)
+
 from src.equipment import Equipment
 
 global jails
