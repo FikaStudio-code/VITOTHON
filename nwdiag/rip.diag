@@ -1,0 +1,39 @@
+nwdiag {
+    inet [shape = cloud];
+    inet -- Host [address = "192.168.56.103"];
+    network bridge00 {
+        Host [address = "192.168.100.254", icon = "icon/class 4_5 switch.jpg", style = "none", color = "none"];
+        address = "192.168.100.0/24"
+        rip01 [address = "192.168.100.1", icon = "icon/router.jpg", style = "none", color = "none"];
+    }
+    network {
+      address = "1.0.0.0/24";
+      rip01 [address = "1.0.0.254"];
+      server01 [address = "1.0.0.1", icon = "icon/laptop.jpg", style = "none", color = "none"];
+    }
+    network {
+        address = "10.0.1.0/24";
+        rip01 [address = "10.0.1.1"];
+        rip02 [address = "10.0.1.2", icon = "icon/router.jpg", style = "none", color = "none"];
+    }
+    network {
+      address = "2.0.0.0/24";
+      rip02 [address = "2.0.0.254"];
+      server02 [address = "2.0.0.1", icon = "icon/laptop.jpg", style = "none", color = "none"];
+    }
+    network {
+        address = "10.0.2.0/24";
+        rip02 [address = "10.0.2.1"];
+        rip03 [address = "10.0.2.2", icon = "icon/router.jpg", style = "none", color = "none"];
+    }
+    network {
+        address = "10.0.3.0/24";
+        rip03 [address = "10.0.3.1"];
+        rip01 [address = "10.0.3.2"];
+    }
+    network {
+      address = "3.0.0.0/24";
+      rip03 [address = "3.0.0.254"];
+      server03 [address = "3.0.0.1", icon = "icon/laptop.jpg", style = "none", color = "none"];
+    }
+}
