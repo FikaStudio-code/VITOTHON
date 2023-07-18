@@ -10,7 +10,7 @@ GuestOS: FreeBSD 13.1-RELEASE
 
 ## 使用方法
 
-### VITOHON を使用する
+### VITOTHON を使用する
 VITOTHON を使用する方法は 2 つあります。  
 1. アプライアンスを使用する  
 VITOTHON のアプライアンスは http://www.fikastudio.net/VITOTHON.ova にて公開しています。リンクからダウンロードして、VirtualBox などでインポートしてください。zenn[^1] に VITOTHON を構築する様子を記事にしているので、内部構成などはそちらを参照してください。
@@ -36,7 +36,7 @@ root_pass: shuma
 ├── nwdiag     # ネットワーク図描画用フォルダ
 ├── shell      # jail 作成スクリプト
 ├── src        # VITOTHON 本体
-└── test
+└── test       # VITOTHON の使用例
 ```
 
 ## Reference
