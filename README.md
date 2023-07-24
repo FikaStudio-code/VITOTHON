@@ -23,6 +23,18 @@ root_pass: shuma
 2. ソースコードを使用する FreeBSD 環境に配置する  
 このリポジトリを使用している FreeBSD 環境に配置して使用してください。使用する上で必要な準備は zenn[^1] の記事を参考にしてください。
 
+### ルータ `jail` を作成する
+```
+bash shell/mkrouter.sh <router_jail_name> <daemon_name>
+```
+`router_jail_name` は作成する `jail` 名です。`daemon_name` は動作するプロトコルの指定です。例えば、RIP を動かすルータを作成する場合は、daemon_name = ripd となります。他には、ospfd, bgpd などがあります。
+
+### 作成した `jail` を削除する
+```
+bash shell/delete_jail.sh <jail_name>
+```
+`jail` 名を指定することで削除することができます。
+
 ### 独自 flavour `jail` を作成する
 このリポジトリには、サーバ（汎用的に使用）とルータ用の `jail` を作成するスクリプトは用意しています。これ以外に独自で `jail` を作成したい（例えば、Web サーバ用 `jail`）場合は、zenn[^1] の記事を参考にしてください。ルータ用 `jail` を作成する記事が特に参考になると思います。
 
